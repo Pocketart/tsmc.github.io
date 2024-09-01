@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Running Costs Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Business Running Costs Calculator</h1>
+        <div id="cost-inputs">
+            <h2>Monthly Costs</h2>
+            <div id="monthly-costs">
+                <!-- Dynamic monthly costs will be added here -->
+            </div>
+            <button id="add-monthly-cost">Add Monthly Cost</button>
+            
+            <h2>Annual Costs</h2>
+            <div id="annual-costs">
+                <!-- Dynamic annual costs will be added here -->
+            </div>
+            <button id="add-annual-cost">Add Annual Cost</button>
+        </div>
+        <hr>
+        <div id="results">
+            <h2>Total Costs</h2>
+            <p id="total-monthly-cost">Total Monthly Cost: $0</p>
+            <p id="total-annual-cost">Total Annual Cost: $0</p>
+            <p id="combined-monthly-cost">Combined Monthly Cost: $0</p>
+            <p id="combined-annual-cost">Combined Annual Cost: $0</p>
+        </div>
+        <hr>
+        <div id="invoice">
+            <h2>Cost Breakdown</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Original Cost</th>
+                        <th>Equivalent Monthly Cost</th>
+                        <th>Equivalent Annual Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-entries">
+                    <!-- Dynamic invoice entries will be added here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total Monthly Cost:</strong></td>
+                        <td colspan="2" id="invoice-total-monthly-cost">$0</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><strong>Total Annual Cost:</strong></td>
+                        <td colspan="2" id="invoice-total-annual-cost">$0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
