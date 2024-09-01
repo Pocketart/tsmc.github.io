@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Number Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Korean Number Unit Converter</h1>
+        <div class="input-row">
+            <div class="input-section">
+                <label for="joInput">Enter 조 (Trillions):</label>
+                <input type="number" id="joInput" placeholder="e.g., 5">
+            </div>
+            <div class="input-section">
+                <label for="eokInput">Enter 억 (Hundred Millions):</label>
+                <input type="number" id="eokInput" placeholder="e.g., 300">
+            </div>
+            <div class="input-section">
+                <label for="manInput">Enter 만 (Ten Thousands):</label>
+                <input type="number" id="manInput" placeholder="e.g., 4000">
+            </div>
+        </div>
+        <div class="exchange-rate-section">
+            <div class="input-section">
+                <label for="exchangeRateInput">Enter Exchange Rate (KRW to USD):</label>
+                <input type="number" step="0.00001" id="exchangeRateInput" placeholder="e.g., 0.00075">
+                <p>For the latest exchange rate, please visit <a href="https://wise.com/gb/currency-converter/krw-to-usd-rate" target="_blank" rel="noopener noreferrer">Wise Currency Converter</a>.</p>
+            </div>
+        </div>
+        <button onclick="convertNumber()">Convert</button>
+        <div class="output-section">
+            <h2>Converted Number:</h2>
+            <p id="outputNumber">0</p>
+        </div>
+        <div class="formatted-output-section">
+            <h2>Formatted Output:</h2>
+            <p id="formattedOutput">0 trillion 0 billion 0 million</p>
+        </div>
+        <div class="currency-conversion-section">
+            <h2>Converted to USD:</h2>
+            <p id="usdOutput">0 USD</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

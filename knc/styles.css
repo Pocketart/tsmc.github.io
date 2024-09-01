@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px; /* Wider content box */
+    text-align: center;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-section {
+    margin-bottom: 20px;
+    flex: 1;
+    margin-right: 20px; /* Adjusted margin for more space */
+    max-width: 250px; /* Set maximum width for input sections */
+}
+
+.input-section:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+.exchange-rate-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the exchange rate section */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    max-width: 100%; /* Ensure input width doesn't exceed its container */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.currency-conversion-section p {
+    font-size: 18px;
+    font-weight: normal;
+}
