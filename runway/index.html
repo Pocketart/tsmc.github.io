@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Runway Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Business Runway Calculator</h1>
+        <div class="input-group">
+            <label for="initial-capital">Initial Capital ($):</label>
+            <input type="number" id="initial-capital" placeholder="Enter initial capital" required>
+        </div>
+        <div class="input-group">
+            <label for="monthly-income">Monthly Income ($):</label>
+            <input type="number" id="monthly-income" placeholder="Enter monthly income" value="0">
+        </div>
+        <hr>
+        <div class="input-group">
+            <label for="cost-name">Cost Name:</label>
+            <input type="text" id="cost-name" placeholder="Enter cost name">
+        </div>
+        <div class="input-group">
+            <label for="cost-amount">Cost Amount ($):</label>
+            <input type="number" id="cost-amount" placeholder="Enter cost amount">
+        </div>
+        <div class="input-group">
+            <label for="cost-type">Cost Type:</label>
+            <select id="cost-type">
+                <option value="monthly">Monthly</option>
+                <option value="annual">Annual</option>
+                <option value="down">Down Payment</option>
+            </select>
+        </div>
+        <button id="add-cost-btn">Add Cost</button>
+        <div class="cost-list" id="cost-list"></div>
+        <hr>
+        <div class="burn-rate">
+            <p><strong>Total Monthly Burn Rate:</strong> $<span id="monthly-burn-rate">0</span></p>
+            <p><strong>Total Annual Burn Rate:</strong> $<span id="annual-burn-rate">0</span></p>
+        </div>
+        <hr>
+        <button id="calculate-btn">Calculate Runway</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
