@@ -27,6 +27,20 @@ header p {
     padding: 20px;
 }
 
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2-column grid layout */
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* 1-column grid layout */
+    }
+}
+
 .grid-item {
     background-color: white;
     padding: 20px;
