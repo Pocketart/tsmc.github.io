@@ -1,4 +1,5 @@
 const costs = [];
+let fundsChart;
 
 document.getElementById('add-cost-btn').addEventListener('click', addCost);
 document.getElementById('calculate-btn').addEventListener('click', calculateRunway);
@@ -88,4 +89,70 @@ function calculateRunway() {
     } else {
         document.getElementById('result').textContent = `Your business does not have enough capital to cover the initial costs or monthly expenses.`;
     }
+
+    // Update the burn rate display after calculation
+    updateBurnRate();
+
+    // Draw the chart with the calculated data
+    drawFundsChart(initialCapital, totalInitialCost, totalMonthlyCost, monthlyIncome);
+}
+
+function drawFundsChart(initialCapital, totalInitialCost, totalMonthlyCost, monthlyIncome) {
+    const remainingCapital = initialCapital - totalInitialCost;
+    const netMonthlyBurnRate = totalMonthlyCost - monthlyIncome;
+    const runwayMonths = Math.max(remainingCapital / netMonthlyBurnRate, 0);
+
+    // Prepare data for the chart
+    const labels = [];
+    const data = [];
+    let currentFunds = remainingCapital;
+    
+    for (let month = 0; month <= Math.ceil(runwayMonths); month++) {
+        labels.push(`Month ${month}`);
+        data.push(currentFunds.toFixed(2));
+        currentFunds -= netMonthlyBurnRate;
+    }
+
+    // Remove previous chart instance if it exists
+    if (fundsChart) {
+        fundsChart.destroy();
+    }
+
+    // Get the canvas context for the chart
+    const ctx = document.getElementById('fundsChart').getContext('2d');
+
+    // Create a new chart
+    fundsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Funds Over Time',
+                data: data,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Time (Months)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Funds ($)'
+                    },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 }
