@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple EBITDA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple EBITDA Calculator</h1>
+        
+        <!-- Revenue Input -->
+        <div class="input-group">
+            <label for="revenue">Revenue ($):</label>
+            <input type="text" id="revenue" placeholder="Enter revenue" value="0">
+        </div>
+
+        <!-- Operating Expenses Input -->
+        <div class="input-group">
+            <label for="operating-expenses">Operating Expenses ($):</label>
+            <input type="text" id="operating-expenses" placeholder="Enter operating expenses" value="0">
+        </div>
+
+        <!-- Depreciation Input -->
+        <div class="input-group">
+            <label for="depreciation">Depreciation ($):</label>
+            <input type="text" id="depreciation" placeholder="Enter depreciation" value="0">
+        </div>
+
+        <!-- Amortization Input -->
+        <div class="input-group">
+            <label for="amortization">Amortization ($):</label>
+            <input type="text" id="amortization" placeholder="Enter amortization" value="0">
+        </div>
+
+        <!-- EBITDA Output -->
+        <div class="input-group">
+            <label for="ebitda">EBITDA ($):</label>
+            <input type="text" id="ebitda" placeholder="EBITDA" value="0" readonly>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Find me on <a href="https://www.linkedin.com/in/shauncheon/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
