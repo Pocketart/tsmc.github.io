@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equity Dilution Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Startup Investment Equity Dilution Calculator</h1>
+        
+        <!-- Description Text -->
+        <p class="description">
+            This tool helps you understand how new investments impact the ownership percentages of existing shareholders in your startup. 
+            <br><br>
+            <strong>How to use:</strong>
+            <ol>
+                <li>Enter the initial ownership percentages of the founder and existing investors in the "Initial Ownership" section.</li>
+                <li>Click "Add Investment" to input new investments. For each investment, enter the investment amount and the pre-money valuation.</li>
+                <li>The table below will automatically update to show the post-money valuation, new investor ownership percentages, and the effects on the founder's and existing investors' ownership.</li>
+                <li>Repeat the process for multiple investments to see cumulative effects.</li>
+            </ol>
+        </p>
+        
+        <!-- Initial Ownership Section -->
+        <div id="initial-ownership">
+            <h2>Initial Ownership</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Shareholder</th>
+                        <th>Initial Ownership (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="ownership-body">
+                    <tr>
+                        <td>Founder</td>
+                        <td><input type="text" id="founder-ownership" placeholder="Enter %" oninput="updateDilution()"></td>
+                    </tr>
+                    <tr>
+                        <td>Investors</td>
+                        <td><input type="text" id="investor-ownership" placeholder="Enter %" oninput="updateDilution()"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- New Investment Section -->
+        <div id="investments">
+            <h2>New Investments</h2>
+            <!-- Button to Add Investment -->
+            <button id="add-investment">Add Investment</button>
+        </div>
+
+        <!-- Equity Dilution Results Section -->
+        <div class="results-section">
+            <h2>Equity Dilution Results</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Investment Amount ($)</th>
+                        <th>Pre-Money Valuation ($)</th>
+                        <th>Post-Money Valuation ($)</th>
+                        <th>New Investor Ownership (%)</th>
+                        <th>Founder Ownership (%)</th>
+                        <th>Investor Ownership (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th></th>
+                        <th id="total-post-money">0</th>
+                        <th id="total-new-investor">0</th>
+                        <th id="total-founder">0</th>
+                        <th id="total-investor">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Find me on <a href="https://www.linkedin.com/in/shauncheon/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
