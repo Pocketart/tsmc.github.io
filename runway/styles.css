@@ -74,3 +74,24 @@ button:hover {
     font-size: 18px;
     text-align: center;
 }
+
+.chart-container {
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
