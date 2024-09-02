@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Acquisition Cost (CAC) Calculator</h1>
+        
+        <!-- Description Text -->
+        <p class="description">
+            Use this calculator to estimate your Customer Acquisition Cost (CAC) by adding multiple marketing campaigns. For each campaign, input the name, marketing expenses, and the number of customers acquired. The calculator will automatically compute the CAC for each campaign and display the total results below.
+        </p>
+        
+        <!-- Campaigns Section -->
+        <div id="campaigns">
+            <h2>Campaigns</h2>
+            <!-- Button to Add Campaign -->
+            <button id="add-campaign">Add Campaign</button>
+        </div>
+
+        <!-- CAC Results Section -->
+        <div class="results-section">
+            <h2>Overall Results</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Campaign Name</th>
+                        <th>Marketing Expenses ($)</th>
+                        <th>Customers Acquired</th>
+                        <th>CAC ($)</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th id="total-expenses">0</th>
+                        <th id="total-customers">0</th>
+                        <th id="total-cac">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Find me on <a href="https://www.linkedin.com/in/shauncheon/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
