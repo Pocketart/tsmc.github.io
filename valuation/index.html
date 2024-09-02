@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre and Post Money Valuation Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pre and Post Money Valuation Calculator</h1>
+        
+        <!-- Investment Amount Input -->
+        <div class="input-group">
+            <label for="investment-amount">Investment Amount ($):</label>
+            <input type="text" id="investment-amount" placeholder="Enter investment amount" value="0">
+        </div>
+
+        <!-- Investor's Equity Percentage Input -->
+        <div class="input-group">
+            <label for="equity-percentage">Investor's Equity Percentage (%):</label>
+            <input type="text" id="equity-percentage" placeholder="Enter equity percentage" value="0">
+        </div>
+
+        <!-- Editable Pre-Money Valuation Input -->
+        <div class="input-group">
+            <label for="pre-money-valuation">Pre-Money Valuation ($):</label>
+            <input type="text" id="pre-money-valuation" placeholder="Pre-money valuation" value="0">
+        </div>
+
+        <!-- Editable Post-Money Valuation Input -->
+        <div class="input-group">
+            <label for="post-money-valuation">Post-Money Valuation ($):</label>
+            <input type="text" id="post-money-valuation" placeholder="Post-money valuation" value="0">
+        </div>
+
+        <!-- Pie Chart for Equity Ownership -->
+        <div class="chart-container">
+            <canvas id="equityChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Find me on <a href="https://www.linkedin.com/in/shauncheon/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
