@@ -92,6 +92,32 @@ body {
   text-decoration: underline;
 }
 
+/* Action Buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+.btn {
+  flex: 1;
+  margin: 0 5px;
+  text-align: center;
+  background-color: #FF8200; /* Orange 1495 C */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #E07000; /* Darker orange for hover */
+}
+
 /* Share Button */
 .share-container {
   margin-top: 20px;
