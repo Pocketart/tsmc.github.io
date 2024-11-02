@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Shaun Cheon
+N:Cheon;Shaun;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:shaun@andopen.co.kr
+item1.EMAIL;TYPE=INTERNET:shauncheon@shauncheon.com
+item1.X-ABLabel:Personal
+TEL;TYPE=WORK:+82 10-7153-5239
+item2.TEL:+1 434-430-8236
+item2.X-ABLabel:US
+ORG:ANDOPEN
+TITLE:Operations Team
+item3.URL:https\://www.linkedin.com/in/shauncheon/
+item3.X-ABLabel:LinkedIn
+item4.URL:https\://www.andopen.co.kr/en
+item4.X-ABLabel:homePage
+CATEGORIES:ANDOPEN,myContacts
+END:VCARD
