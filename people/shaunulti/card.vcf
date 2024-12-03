@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Shaun Cheon
+N:Cheon;Shaun;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:shaun@ultiracer.com
+item1.EMAIL;TYPE=INTERNET:shauncheon@shauncheon.com
+item1.X-ABLabel:Personal
+TEL;TYPE=CELL:+82 10-7153-5239
+TEL;TYPE=CELL:+1 434-430-8236
+ORG:RealDesignTech (Ultiracer)
+TITLE:Manager
+item2.URL:https\://www.realdesigntech.com/
+item2.X-ABLabel:Website
+item3.URL:https\://www.linkedin.com/in/shauncheon/
+item3.X-ABLabel:LinkedIn
+CATEGORIES:myContacts
+END:VCARD
